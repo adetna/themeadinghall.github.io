@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel';
+            background-color: #000;
+            color: #edcd81;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header a {
+            color: #edcd81;
+            text-decoration: none;
+            margin-right: 20px; 
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50vh;
+            position: relative;
+        }
+
+        #logo {
+            width: 600px;
+            height: 600px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        nav {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 30px;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 130vh;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+       #main-content {
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        transition: opacity 0.5s ease; 
+    }
+
+    .image-section::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        z-index: 2;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #edcd81;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #000;
+            color: #edcd81;
+            text-align: center;
+            padding: 0px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 1000;
+        }
+
+        .image-section {
+            transition: opacity 0.10s ease;
+        }
+
+        .fade-in {
+            animation: fadeIn 5s ease forwards;
+        }
+
+        .fade-out {
+            opacity: 0.3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="ourstory.html">Our Story</a>
+            <a href="meads.html">Meads</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="image-section">
+        <div id="logo-container" class="fade-out">
+            <img id="logo" src="themeadhalllogo.jpg" alt="Meadery Logo">
+        </div>
+        <div id="main-content">
+            <h1>OUR STORY</h1>
+            <p>This is how we started our Meadery Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 The Meading Hall. All rights reserved.
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const logoContainer = document.getElementById('logo-container');
+        const logo = document.getElementById('logo');
+        const mainContent = document.getElementById('main-content');
+
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            const opacity = 1 - scrollPosition / window.innerHeight;
+
+            
+            logoContainer.style.opacity = Math.max(0, opacity).toFixed(2);
+            mainContent.style.opacity = 1; 
+
+            
+            logo.style.opacity = Math.max(0, opacity).toFixed(2);
+        });
+    });
+    </script>
+</body>
+
+</html>
