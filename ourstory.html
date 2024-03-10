@@ -56,7 +56,15 @@
             width: 600px;
             }
         }
-            
+        @media (max-width: 767px) {
+            #logo-container {
+        margin-top: 60px; /* Adjust this value to give enough space for the fixed header */
+    }
+
+            #logo {
+        width: 100%; /* Make the logo responsive to the width of its container */
+    }
+}
 
         nav {
             display: flex;
