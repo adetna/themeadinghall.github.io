@@ -39,30 +39,9 @@
         }
 
         section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 130vh;
-            padding: 50px;
-            box-sizing: border-box;
-        }
-
-        #main-content {
             text-align: center;
-            position: relative;
-            z-index: 10;
-            transition: opacity 0.5s ease;
-            margin-top: 30px; /* Adjust this value to move content higher */
-            margin-bottom: 40px;
-            padding-top: 20px;
+            padding: 80px 20px 20px; /* Adjust these values for better positioning */
             box-sizing: border-box;
-        }
-
-        @media (min-width: 768px) {
-            #main-content {
-                padding-top: 80px;
-            }
         }
 
         h1 {
@@ -80,36 +59,13 @@
             background-color: #000;
             color: #edcd81;
             text-align: center;
-            padding: 0px;
+            padding: 20px 0;
             width: 100%;
             position: fixed;
             bottom: 0;
             z-index: 1000;
         }
-
-        .image-section {
-            transition: opacity 0.10s ease;
-        }
-
-        .fade-in {
-            animation: fadeIn 5s ease forwards;
-        }
-
-        .fade-out {
-            opacity: 0.3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
-        }
     </style>
-
 </head>
 
 <body>
@@ -122,17 +78,14 @@
         </nav>
     </header>
 
-    <section id="home">
-        <div id="main-content">
-            <h1>OUR STORY</h1>
-            <p>This is how we started our Meadery Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+    <section>
+        <h1>OUR STORY</h1>
+        <p>This is how we started our Meadery Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </section>
 
     <footer>
         &copy; 2023 The Meading Hall. All rights reserved.
     </footer>
-
 </body>
 
 </html>
