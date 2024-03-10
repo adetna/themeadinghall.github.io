@@ -41,9 +41,10 @@
 
         #logo {
             width: 100px;
-            height: autopx;
+            height: auto;
             opacity: 1;
             transition: opacity 0.5s ease;
+            max-width: 600px;
         }
 
         nav {
@@ -84,11 +85,12 @@
             font-size: 3em;
             color: #edcd81;
             margin-bottom: 5px;
+            margin-top: 10px; /* Adjust this value to move the h1 higher or lower */
         }
 
         p {
             font-size: 1.2em;
-            margin-top: 5px;
+            margin-top: 10px; /* Adjust this value to move the p higher or lower */
         }
 
         footer {
@@ -161,14 +163,4 @@
                 const opacity = 1 - scrollPosition / window.innerHeight;
 
                
-                logoContainer.style.opacity = Math.max(0, opacity).toFixed(2);
-                mainContent.style.opacity = 1; 
-
-                
-                logo.style.opacity = Math.max(0, opacity).toFixed(2);
-            });
-        });
-    </script>
-</body>
-
-</html>
+               
