@@ -131,26 +131,7 @@
     <footer>
         &copy; 2023 The Meading Hall. All rights reserved.
     </footer>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const logoContainer = document.getElementById('logo-container');
-        const logo = document.getElementById('logo');
-        const mainContent = document.getElementById('main-content');
-
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            const opacity = 1 - scrollPosition / window.innerHeight;
-
-            
-            logoContainer.style.opacity = Math.max(0, opacity).toFixed(2);
-            mainContent.style.opacity = 1; 
-
-            
-            logo.style.opacity = Math.max(0, opacity).toFixed(2);
-        });
-    });
-    </script>
+     
 </body>
 
 </html>
