@@ -40,12 +40,18 @@
         }
 
         #logo {
-            width: 600px;
+            width: 100px;
             height: auto;
             opacity: 1;
             transition: opacity 0.5s ease;
             max-width: 600px;
         }
+        @media (min-width: 768px) {
+            #logo {
+                width: 600px;
+            }
+        }
+            
 
         nav {
             display: flex;
